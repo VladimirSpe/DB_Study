@@ -1,0 +1,16 @@
+--select FirstName, LastName from customers where City like 'Prague';
+--select FirstName, LastName from customers where FirstName like 'M%' and FirstName like '%ch%';
+--select tracks.Name, tracks.Bytes / 1048576 from tracks;
+--select employees.LastName, employees.FirstName from employees where strftime('%Y', employees.HireDate) = '2002' and employees.City like 'Calgary';
+--select employees.LastName, employees.FirstName from employees where (cast(strftime('%Y', employees.HireDate) as decimal) - cast(strftime('%Y', employees.BirthDate) as decimal)) >= 40;
+--select * from customers where customers.Country like 'USA' and customers.Fax is null;
+--select sales.ShipCity  from sales where sales.ShipCountry like 'Canada' and (cast(strftime('%m', sales.SalesDate) as decimal) = 8 or cast(strftime('%m', sales.SalesDate) as decimal) = 9);
+--select customers.Email from customers where customers.Email like '%gmail.com';
+--select LastName, FirstName from employees where ((julianday('now') - julianday(employees.HireDate))/365) >= 18;
+--select DISTINCT Title from employees order by Title;
+--select LastName, FirstName, 2024 - Age from customers order by LastName, FirstName, 2024 - Age;
+--select min(tracks.Milliseconds) / 1000 from tracks
+--select tracks.Name, min(tracks.Milliseconds) / 1000 from tracks;
+--select avg(customers.Age) from customers;
+--select LastName from employees where cast(strftime('%m', employees.HireDate) as decimal) = 10;
+--select LastName from employees where HireDate = (select min(employees.HireDate) from employees);
